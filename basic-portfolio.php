@@ -9,6 +9,10 @@
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 	*/
 	
+	defined('ABSPATH' ) or die('No script kiddies please!' );
+
+	include( dirname( __FILE__ ) . '/post_type.php' );
+
 	
 	/*Custom post type*/
 	add_action( 'init', function(){
