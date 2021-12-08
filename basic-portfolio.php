@@ -15,3 +15,6 @@
 	include( dirname( __FILE__ ) . '/shortcode.php' );
 
 	
+	add_action('wp_head', function(){
+		wp_enqueue_style( 'basic_portafolio_css', plugins_url('assets/basic_portfolio.css', __FILE__) );
+	});
