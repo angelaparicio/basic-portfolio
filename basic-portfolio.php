@@ -12,6 +12,7 @@
 	defined('ABSPATH' ) or die('No script kiddies please!' );
 
 	include( dirname( __FILE__ ) . '/post_type.php' );
+	include( dirname( __FILE__ ) . '/metaboxes.php' );
 	include( dirname( __FILE__ ) . '/shortcode.php' );
 
 	
