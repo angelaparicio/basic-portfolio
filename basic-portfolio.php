@@ -4,7 +4,7 @@
 	Plugin Name: Basic Portfolio
 	Description: Plugin muy simple para crear un portfolio de trabajos
 	Author: Angel Aparicio
-	Version: 0.2
+	Version: 0.1
 	License: GPLv3 or later
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 	*/
@@ -18,4 +18,16 @@
 	
 	add_action('wp_head', function(){
 		wp_enqueue_style( 'basic_portafolio_css', plugins_url('assets/basic_portfolio.css', __FILE__) );
+	});
+	
+	
+	add_filter( 'the_content', function( $content ) {
+  		
+  		global $post;
+  			
+  		if ( is_single() && $post->post_type == 'work-portfolio' && has_post_thumbnail($post->ID) ) {
+			$content = get_the_post_thumbnail($post->ID, 'large') . $content;
+		}
+  	
+  		return $content;
 	});
