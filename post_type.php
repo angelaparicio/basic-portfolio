@@ -28,7 +28,7 @@
 	    	'query_var'          => true,
 	    	'rewrite'            => array( 'slug' => 'categories-work-portfolio' ),
 	    	'labels'             => array(
-			    'name'             => _x( 'Categoría', 'taxonomy general name' ),
+			    'name'             => _x( 'Categorías', 'taxonomy general name' ),
 			    'singular_name'    => _x( 'Categoría', 'taxonomy singular name' ),
 			    'search_items'     => __( 'Buscar por categoría' ),
 			    'all_items'        => __( 'Todas las categorías' ),
