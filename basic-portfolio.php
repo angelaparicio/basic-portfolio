@@ -22,12 +22,18 @@
 	
 	
 	add_filter( 'the_content', function( $content ) {
-  		
-  		global $post;
-  			
-  		if ( is_single() && $post->post_type == 'work-portfolio' && has_post_thumbnail($post->ID) ) {
+		
+		global $post;
+		
+		if ( is_single() && $post->post_type == 'work-portfolio' && has_post_thumbnail($post->ID) ) {
+			
 			$content = get_the_post_thumbnail($post->ID, 'large') . $content;
+			
+			$work_start_year = get_post_meta( $post->ID, 'work_start_year', true );
+			$work_end_year = get_post_meta( $post->ID, 'work_end_year', true );
+			
+			$content = $content . '<div class="meta_years"><strong>Fecha:</strong> '.$work_start_year.' - '.$work_end_year.'</div>';
 		}
-  	
-  		return $content;
+		
+		return $content;
 	});
