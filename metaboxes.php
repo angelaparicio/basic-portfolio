@@ -28,7 +28,7 @@ add_action( 'save_post', function($post_id) {
 
 	if ( !isset( $_POST['work_portfolio_nonce'] ) || !wp_verify_nonce( $_POST['work_portfolio_nonce'], 'work_portfolio_save' ) ) return;
 	
-	if ( !current_user_can('edit_post') ) return;
+	if ( !current_user_can('edit_posts') ) return;
 
 	if ( isset($_POST['work_start_year']) )
 		update_post_meta( $post_id, 'work_start_year', $_POST['work_start_year'] );
