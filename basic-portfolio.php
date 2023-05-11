@@ -2,7 +2,7 @@
 	
 	/*
 	Plugin Name: Basic Portfolio
-	Description: Plugin muy simple para crear un portfolio de trabajos
+	Description: Very simple plugin to create a works portfolio
 	Author: Angel Aparicio
 	Version: 0.1
 	License: GPLv3 or later
