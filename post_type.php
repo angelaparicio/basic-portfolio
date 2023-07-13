@@ -1,5 +1,7 @@
 <?php
 
+	defined('ABSPATH' ) or die('No script kiddies please!' );
+
 	/*Custom post type*/
 	add_action( 'init', function(){
 	

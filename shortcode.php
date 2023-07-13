@@ -1,4 +1,6 @@
 <?php
+	
+	defined('ABSPATH' ) or die('No script kiddies please!' );
 
 	add_shortcode( 'show_portfolio', function(){
 		

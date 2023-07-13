@@ -1,5 +1,6 @@
 <?php
 
+defined('ABSPATH' ) or die('No script kiddies please!' );
 
 add_action( 'add_meta_boxes', function() {
 	add_meta_box( 'work_portfolio_custom_fields', 'Fecha inicio y final', 'work_portfolio_custom_fields_render' , 'work-portfolio' );
