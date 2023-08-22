@@ -32,7 +32,9 @@
 			$work_start_year = get_post_meta( $post->ID, 'work_start_year', true );
 			$work_end_year = get_post_meta( $post->ID, 'work_end_year', true );
 			
-			$content = $content . '<div class="meta_years"><strong>Fecha:</strong> '.$work_start_year.' - '.$work_end_year.'</div>';
+			$content = $content . '<div class="meta_years"><strong>'.__('Fecha').':</strong> ';
+			$content = $content . esc_html($work_start_year).' - '.esc_html($work_end_year);
+			$content = $content . '</div>';
 		}
 		
 		return $content;

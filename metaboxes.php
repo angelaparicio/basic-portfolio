@@ -14,10 +14,10 @@ function apbp_work_portfolio_custom_fields_render($post){
 
 	wp_nonce_field( 'work_portfolio_save', 'work_portfolio_nonce' );	
 	
-	echo '<p><label for="work_start_year" style="width: 150px;display: inline-block;">Año de inicio</label>';
+	echo '<p><label for="work_start_year" style="width: 150px;display: inline-block;">'.__('Año de inicio').'</label>';
 	echo '<input type="number" name="work_start_year" id="work_start_year" value="'.esc_html($work_start_year).'" /></p>';
 	
-	echo '<p><label for="work_end_year" style="width: 150px;display: inline-block;">Año de finalización</label>'; 
+	echo '<p><label for="work_end_year" style="width: 150px;display: inline-block;">'.__('Año de finalización').'</label>'; 
 	echo '<input type="number" name="work_end_year" id="work_end_year" value="'.esc_html($work_end_year).'" /></p>';
 }
 
