@@ -32,7 +32,7 @@
 			$work_start_year = get_post_meta( $post->ID, 'work_start_year', true );
 			$work_end_year = get_post_meta( $post->ID, 'work_end_year', true );
 			
-			$content = $content . '<div class="meta_years"><strong>'.__('Fecha').':</strong> ';
+			$content = $content . '<div class="meta_years"><strong>'.esc_html_e('Fecha', 'basic-portfolio').':</strong> ';
 			$content = $content . esc_html($work_start_year).' - '.esc_html($work_end_year);
 			$content = $content . '</div>';
 		}
