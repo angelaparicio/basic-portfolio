@@ -27,18 +27,22 @@ add_action( 'save_post', function($post_id) {
 
 	if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) return;
 
-	if ( empty($_REQUEST['work_portfolio_nonce']) || !wp_verify_nonce( wp_unslash($_POST['work_portfolio_nonce']), 'work_portfolio_save' ) ) return;
+	if ( !isset($_POST['work_portfolio_nonce']) || !wp_verify_nonce( wp_unslash($_POST['work_portfolio_nonce']), 'work_portfolio_save' ) ) return;
 	
 	if ( !current_user_can('edit_posts') ) return;
 
-	$work_start_year = sanitize_text_field($_POST['work_start_year']);
-	if ( $work_start_year ){
-		update_post_meta( $post_id, 'work_start_year', $work_start_year );
+	if (isset($_POST['work_start_year'])){
+		$work_start_year = sanitize_text_field(wp_unslash($_POST['work_start_year']));
+		if ( $work_start_year ){
+			update_post_meta( $post_id, 'work_start_year', $work_start_year );
+		}
 	}
 
-	$work_end_year = sanitize_text_field($_POST['work_end_year']);
-	if ( $work_end_year ){
-		update_post_meta( $post_id, 'work_end_year', $work_end_year);
+	if (isset($_POST['work_end_year'])){
+		$work_end_year = sanitize_text_field(wp_unslash($_POST['work_end_year']));
+		if ( $work_end_year ){
+			update_post_meta( $post_id, 'work_end_year', $work_end_year);
+		}
 	}
 	
 });

@@ -2,9 +2,11 @@
 	
 	/*
 	Plugin Name: Basic Portfolio
-	Description: Very simple plugin to create a works portfolio
+	Short Description: Very simple plugin to create a jobs portfolio
+	Description: Very simple plugin to create a jobs portfolio
 	Author: Angel Aparicio
-	Version: 0.1
+	Version: 0.2
+	Text Domain: basic-portfolio
 	License: GPLv3 or later
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 	*/
@@ -17,7 +19,7 @@
 
 	
 	add_action('wp_head', function(){
-		wp_enqueue_style( 'basic_portafolio_css', plugins_url('assets/basic_portfolio.css', __FILE__) );
+		wp_enqueue_style( 'basic_portafolio_css', plugins_url('assets/basic_portfolio.css', __FILE__, '0.2') );
 	});
 	
 	
