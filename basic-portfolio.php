@@ -2,7 +2,6 @@
 	
 	/*
 	Plugin Name: Basic Portfolio
-	Short Description: Very simple plugin to create a jobs portfolio
 	Description: Very simple plugin to create a jobs portfolio
 	Author: Angel Aparicio
 	Version: 0.2
@@ -19,7 +18,7 @@
 
 	
 	add_action('wp_head', function(){
-		wp_enqueue_style( 'basic_portafolio_css', plugins_url('assets/basic_portfolio.css', __FILE__, '0.2') );
+		wp_enqueue_style( 'basic_portafolio_css', plugins_url('assets/basic_portfolio.css', __FILE__), array(), '0.2' );
 	});
 	
 	
