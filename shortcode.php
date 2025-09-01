@@ -32,7 +32,7 @@
 			
 			$shortcode .= '<div id="work-porfolio-element-'.$post->ID.'" class="work-porfolio-element">';
 				
-				$shortcode .= '<a href="'.$post->guid.'">';
+				$shortcode .= '<a href="'.get_post_permalink($post->ID).'">';
 					$shortcode .= '<div class="work-porfolio-image">';
 						$shortcode .= get_the_post_thumbnail($post->ID);
 					$shortcode .= '</div>';
