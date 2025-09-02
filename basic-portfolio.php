@@ -4,7 +4,7 @@
 	Plugin Name: Basic Portfolio
 	Description: Very simple plugin to create a jobs portfolio
 	Author: Angel Aparicio
-	Version: 0.2
+	Version: 0.3
 	Text Domain: basic-portfolio
 	License: GPLv3 or later
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
