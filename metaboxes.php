@@ -3,7 +3,7 @@
 defined('ABSPATH' ) or die('No script kiddies please!' );
 
 add_action( 'add_meta_boxes', function() {
-	add_meta_box( 'work_portfolio_custom_fields', esc_html_e('Fecha inicio y final', 'basic-portfolio'), 'apbp_work_portfolio_custom_fields_render' , 'work-portfolio' );
+	add_meta_box( 'work_portfolio_custom_fields', esc_html('Fecha inicio y final', 'basic-portfolio'), 'apbp_work_portfolio_custom_fields_render' , 'work-portfolio' );
 });
 
 
